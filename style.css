@@ -1,0 +1,270 @@
+*,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav,
+ul {
+  display: flex;
+}
+
+.card-button,
+a {
+  text-decoration: none;
+}
+
+.background-bottom,
+.container {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.comment-list,
+ul {
+  list-style-type: none;
+}
+
+a,
+h3 {
+  font-size: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+body {
+  background: #272727;
+  font-family: arial;
+  height: 350vh;
+}
+
+#r,
+.card-description,
+.game-info,
+a {
+  font-family: 'Cinzel Decorative';
+}
+
+.container {
+  width: 100%;
+  height: 150vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/images/metro-2033.png);
+}
+
+nav {
+  background-color: #8a000000;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  align-items: center;
+}
+
+li {
+  margin-right: 20px;
+}
+
+a {
+  color: #ffd900;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.logo {
+  height: 85px;
+  margin-right: 40px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110vh;
+}
+
+.card {
+  width: 400px;
+  background-color: #44424200;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 600px;
+}
+
+.card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-content {
+  padding: 25px;
+  text-align: center;
+}
+
+.card-description {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #ffd900;
+}
+
+.card-button {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #c50606;
+  color: #ffc400;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.card-button:hover {
+  background-color: #fc0;
+}
+
+.card {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.card.appear {
+  opacity: 1;
+}
+
+.background-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.664), rgba(0, 0, 0, 0.5)), url(assets/images/metro-last-light-standard-edition.jpg);
+  z-index: -1;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.star-rating {
+  font-size: 60px;
+  color: gold;
+  margin-bottom: 20px;
+  animation: 1s infinite starAnimation;
+  font-family: 'Cinzel Decorative';
+}
+
+@keyframes starAnimation {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.player-count {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 60px;
+  animation: 1s infinite playerCountAnimation;
+}
+
+@keyframes playerCountAnimation {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.comment-list {
+  padding: 0;
+  margin-top: 20px;
+}
+
+.comment {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 10px;
+  background-color: #af000070;
+  border-radius: 4px;
+  padding: 10px;
+  animation: 0.8s ease-in-out commentAnimation;
+}
+
+@keyframes commentAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.comment:first-child {
+  margin-top: 10px;
+}
+
+.comment:before {
+  content: "★★★★";
+  margin-right: 5px;
+  color: gold;
+  font-size: 20px;
+  animation: 1.5s infinite starPulse;
+}
+
+@keyframes starPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+
+.comment-content {
+  flex-grow: 1;
+}
+
+.comment-content p {
+  margin: 5px 0;
+}
+
+.comment-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+h3 {
+  color: #fff;
+}
+
+#r {
+  font-size: 50px;
+}
